@@ -1,3 +1,8 @@
+
+![Screenshot 2024-10-05 at 4 13 06 PM (2)](https://github.com/user-attachments/assets/512279e9-754b-4379-b069-dd1f8e61b7d6)
+
+
+
 Key Counter App
 ----------------
 This is a Flask-based web application that tracks the number of keys pressed on the user's keyboard. It updates the count in real-time on a simple and modern web interface with a glassmorphism effect.
