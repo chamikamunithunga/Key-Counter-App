@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Counter</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background: linear-gradient(135deg, #000000, #004f62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .glass-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #ffea00;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 0.7rem;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 0, 0, 0.716);
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #28a745;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            text-shadow: 1px 1px 3px #ffff00b3;
+            color: #fff200;
+        }
+
+        #key-count {
+            font-weight: bold;
+            color: #ff0000;
+        }
+    </style>
+    <script>
+        function updateCount() {
+            fetch('/get_count')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('key-count').innerText = data.count;
+                });
+        }
+
+        setInterval(updateCount, 1000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Key Counter</h1>
+        <p>Keys pressed: <span id="key-count">0</span></p>
+    </div>
+</body>
+</html>
