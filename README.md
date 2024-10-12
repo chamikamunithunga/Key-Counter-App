@@ -6,21 +6,19 @@
 
 Key Counter App
 ----------------
-This is a Flask-based web application that tracks the number of keys pressed on the user's keyboard. It updates the count in real-time on a simple and modern web interface with a glassmorphism effect.
+The Key Counter App is a simple yet powerful application that allows users to count key presses on their keyboard. It can be used for various purposes, such as tracking typing speed, monitoring keyboard usage, or as a game for practice.
 
 Features
----------
-Key Press Counter: Displays the total number of key presses made by the user.
-
-Real-time Updates: Automatically updates the key press count every second using JavaScript fetch and setInterval.
-
-Glassmorphism Form: The form is styled using a modern glassmorphism design for a sleek user interface.
-
-Two-Tone Background: The background is designed with a smooth two-tone gradient using CSS.
-
-Technologies Used
-------------------
+----------
+Key Counting: Count the number of times each key is pressed.
+Display Counts: Show real-time counts for each key pressed.
+Reset Counter: Reset the counts to start a new session.
+User-Friendly Interface: Simple and intuitive design for easy use.
+Data Export: Option to export the key press counts to a CSV file (optional feature).
+Technology Stack
 Frontend: HTML, CSS, JavaScript
+Backend: Node.js (if using a server-side component)
+Database: None (for a basic implementation) or a lightweight solution like SQLite (if storing data)
 
 Backend: Flask (Python)
 
